@@ -47,40 +47,65 @@ const Home = () => {
     },
     {
       title: "Years Experience",
-      data: "0+",
+      data: "Fresher",
     },
     {
-      title: "Happy Clients",
-      data: "0+",
+      title: "Commitment",
+      data: "100%",
     },
   ];
 
   return (
-    <div className="w-full min-h-screen grid md:grid-cols-2 grid-cols-1 px-5 md:px-25">
-      <div className=" flex flex-col justify-center gap-8 mt-5">
-        <div>
-          <p className=" text-5xl font-bold ">Hii, I'm Chandan!</p>
-          <p className="text-5xl font-extrabold text-[#00f7ff]">
-            Software Developer
-          </p>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            provident laboriosam ex tempora, nisi quasi impedit minima ea
-            blanditiis nemo esse laborum officiis debitis velit eos? Quis
-            accusamus illo velit harum autem iste possimus? Rerum, cupiditate,
-            nulla, voluptates aliquid minima rem repudiandae at expedita
-            architecto consequuntur voluptate nobis. Quas, esse, dolor tempora
-            nesciunt itaque asperiores ullam provident excepturi saepe dolores
-            corporis ut. Aperiam perferendis nesciunt maxime, temporibus
-            voluptatem similique voluptatibus laborum dignissimos nemo sint.
+    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 px-5 lg:px-25">
+      <div className=" flex flex-col justify-center gap-5">
+        {/* Available for work section */}
+        <div className="flex items-center gap-5">
+          <div className="h-1 w-12 bg-[#00f7ff]"></div>
+          <p
+            className="text-[#00f7ff]
+            uppercase
+            tracking-[4px]
+            text-sm
+            font-semibold"
+          >
+            AVAILABE FOR WORK
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 grid-cols-1 place-items-center md:place-items-start gap-5">
+        {/* Heading - chandan section */}
+        <div className="space-y-1">
+          <p className="font-space text-4xl font-bold leading-tight">
+            Hi, I'm Chandan!
+          </p>
+          <p className="text-4xl lg:text-5xl font-bold text-[#00f7ff] font-space">
+            <TypeAnimation
+              sequence={[
+                "Software Developer",
+                1000,
+                "Problem Solver",
+                1000,
+                "Open to Work",
+                1000,
+              ]}
+              wrapper="span"
+              speed={40}
+              repeat={Infinity}
+            ></TypeAnimation>
+          </p>
+          <p className="text-lg font-light ">
+            Passionate software developer and recent graduate, eager to turn academic knowledge into real-world impact. I enjoy building clean, responsive web applications and love solving problems through code. Ready to learn fast, contribute from day one, and grow with a great team.
+          </p>
+        </div>
+
+        {/* Information Div section */}
+        <div className="grid md:grid-cols-3 grid-cols-1 place-items-center lg:place-items-start gap-5 md:mt-2">
           {infoDiv.map((info, index) => {
             return (
-              <div key={index} className="h-25 w-full md:w-45 bg-[#1a2026] rounded-lg  flex flex-col justify-center items-center gap-3 border border-gray-700">
-                <p className="text-4xl font-extrabold text-[#00f7ff]">
+              <div
+                key={index}
+                className="h-25 w-full lg:w-45 bg-[#1a2026] rounded-lg  flex flex-col justify-center items-center gap-2 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]"
+              >
+                <p className="text-2xl lg:text-3xl font-bold text-[#00f7ff]">
                   {info.data}
                 </p>
                 <p className="text-sm text-gray-400">{info.title}</p>
@@ -89,7 +114,8 @@ const Home = () => {
           })}
         </div>
 
-        <div className="flex gap-5 justify-center md:justify-start">
+        {/* Button section */}
+        <div className="flex gap-5 justify-center md:justify-start md:mt-2">
           {HireAndDownloadCVButton.map((content, index) => {
             return (
               <button
@@ -97,7 +123,7 @@ const Home = () => {
                 onClick={() => {
                   window.open(content.link, "_blank", "noopener,noreferrer");
                 }}
-                className="border border-gray-700 rounded-full md:px-7 md:py-3 p-4 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-200 hover:shadow-xl hover:shadow-cyan-600/50"
+                className="border border-gray-700 rounded-full lg:px-7 px-6 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
               >
                 {content.name} <content.icon />
               </button>
@@ -105,12 +131,13 @@ const Home = () => {
           })}
         </div>
 
-        <div className="flex gap-5 md:mt-2">
+        {/* Social media icon section */}
+        <div className="flex gap-5 lg:mt-2 md:mt-2">
           {socialMedia.map((socialMedia, index) => {
             return (
               <button
                 key={index}
-                className="border-gray-700 text-[20px] border p-4 rounded-xl bg-[#1a2026] text-gray-400 hover:bg-green-500 duration-200 hover:text-black hover:shadow-xl hover:shadow-green-500/50 cursor-pointer"
+                className="border-gray-700 text-[20px] border p-3 rounded-xl bg-[#1a2026] text-gray-400 hover:bg-green-500 hover:text-black transition-all duration-300 hover:shadow-xl hover:shadow-cyan-600/50 cursor-pointer"
                 onClick={() => {
                   window.open(
                     socialMedia.link,
@@ -126,12 +153,40 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-end mt-5">
-        <img
-          src="./src/assets/chandan.jpeg"
-          alt=""
-          className="md:h-140 h-100 border border-gray-700 rounded-2xl hover:scale-105 duration-300"
-        />
+      {/* Image section */}
+      <div
+        className="relative flex items-center justify-center lg:justify-end w-full">
+        {/* CYAN GLOW */}
+        <div
+          className="
+            absolute
+            w-[320px]
+            h-80
+
+            md:w-105
+            md:h-105
+
+            bg-cyan-400/20
+
+            blur-3xl
+
+            rounded-full
+
+            animate-pulse
+          "
+        ></div>
+
+        {/* IMAGE CONTAINER */}
+        <div className="relative w-75 h-105 md:w-95 md:h-125 rounded-4xl bg-linear-to-b from-cyan-400/30 to-transparent p-0.75 shadow-[0_0_40px_rgba(0,217,255,0.2)] overflow-hidden animate-[float_5s_ease-in-out_infinite]">
+          {/* INNER BOX */}
+          <div className="w-full h-full bg-[#0B1120] rounded-4xl overflow-hidden">
+            <img
+              src="./src/assets/chandan.jpeg"
+              alt="Chandan"
+              className="w-full h-full object-cover hover:scale-107 transition-all duration-500"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

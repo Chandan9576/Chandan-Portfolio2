@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const links = [
   { to: "/", label: "Home" },
@@ -11,14 +11,16 @@ const links = [
 ];
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className="h-20 border-b border-gray-700 flex items-center justify-between px-5 md:px-25 fixed top-0 left-0 w-full z-50 backdrop-blur-xl">
-      
+    <div className="h-20 border-b border-gray-700 flex items-center justify-between px-5 lg:px-25 fixed top-0 left-0 w-full z-50 backdrop-blur-xl">
       {/* Logo */}
-      <p className="text-4xl font-bold text-white">Chandan</p>
+      <p className="text-3xl font-bold text-white cursor-pointer" onClick={()=>{navigate("/")}}>Chandan</p>
 
       {/* Nav Links */}
-      <div className="bg-[#1c1c1c] h-14 w-full hidden md:flex items-center justify-center gap-5 mx-10 rounded-full text-[17px] border border-gray-700">
+      <div className="bg-[#1c1c1c] h-14 w-full hidden lg:flex items-center justify-center gap-5 mx-10 rounded-full text-[17px] border border-gray-700">
         {links.map(({ to, label }) => (
           <NavLink
             key={to}
@@ -35,10 +37,13 @@ const Navbar = () => {
       </div>
 
       {/* CTA Button */}
-      <button className="bg-[#00f7ff] h-10 md:h-14 px-5 w-auto rounded-full text-[17px] text-black border cursor-pointer shrink-0">
+      <button
+        className="bg-[#00f7ff] h-10 lg:h-14 px-5 w-auto rounded-full text-[17px] text-black border cursor-pointer shrink-0 transition-all
+        duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,217,255,0.25)]"
+        onClick={()=>{navigate("/contact")}}
+      >
         Let's Talk
       </button>
-
     </div>
   );
 };
