@@ -39,7 +39,7 @@ const Navbar = () => {
       {/* CTA Button */}
       <button
         className="bg-[#00f7ff] h-10 lg:h-14 px-5 w-auto rounded-full text-[17px] text-black border cursor-pointer shrink-0 transition-all
-        duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,217,255,0.25)]"
+        duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,217,255,0.25)] font-medium"
         onClick={()=>{navigate("/contact")}}
       >
         Let's Talk
