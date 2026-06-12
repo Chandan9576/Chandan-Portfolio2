@@ -124,7 +124,7 @@ const Home = () => {
                 onClick={() => {
                   window.open(content.link, "_blank", "noopener,noreferrer");
                 }}
-                className="border border-gray-700 rounded-full lg:px-7 px-6 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
+                className="border border-gray-700 rounded-full lg:px-7 px-5 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
               >
                 {content.name} <content.icon />
               </button>

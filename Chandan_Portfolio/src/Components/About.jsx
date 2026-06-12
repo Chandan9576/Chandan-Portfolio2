@@ -35,8 +35,8 @@ const About = () => {
       <div className="flex flex-col items-center justify-center">
         {/* ------ heading ------ */}
         <div className="grid place-items-center gap-3">
-          <h1 className="text-5xl text-[#00f7ff] font-extrabold ">About Me</h1>
-          <div className="h-1 w-25 bg-[#00f7ff] rounded-full"></div>
+          <h1 className=" text-3xl md:text-5xl text-[#00f7ff] font-extrabold ">About Me</h1>
+          <div className="h-2 w-25 bg-[#00f7ff] rounded-full"></div>
         </div>
 
         {/* ------ About me information ------ */}

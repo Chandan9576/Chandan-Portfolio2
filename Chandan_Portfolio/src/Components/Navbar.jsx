@@ -15,7 +15,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-20 border-b border-gray-700 flex items-center justify-between px-5 lg:px-25 fixed top-0 left-0 w-full z-50 backdrop-blur-xl">
+    <div className="h-20 border-b border-gray-700 flex items-center justify-between px-5 lg:px-25 fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
       {/* Logo */}
       <p className="text-3xl font-bold text-white cursor-pointer" onClick={()=>{navigate("/")}}>Chandan</p>
 
