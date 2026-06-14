@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FaReact } from "react-icons/fa";
 import { FaDatabase } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
@@ -7,103 +7,130 @@ import { MdSecurity } from "react-icons/md";
 import { SiDotnet } from "react-icons/si";
 
 const Services = () => {
-
-
   const service = [
     {
-      icon:FaReact,
-      title:"Frontend Development",
-      summary:"Building responsive, modern, and user-friendly web interfaces using React, JavaScript, and Tailwind CSS.",
-      key:["Responsive Design","Perfomance Optimized","Seo Friendly","Modern Design"]
+      icon: FaReact,
+      title: "Frontend Development",
+      summary:
+        "Building responsive, modern, and user-friendly web interfaces using React, JavaScript, and Tailwind CSS.",
+      key: [
+        "Responsive Design",
+        "Perfomance Optimized",
+        "Seo Friendly",
+        "Modern Design",
+      ],
     },
     {
-      icon:SiDotnet,
-      title:"Full Stack Web Development",
-      summary:"Developing complete web applications using React, ASP.NET Core, databases, and REST APIs.",
-      key:["End-to-End Apps","Query Optimization","Data Security","Database Design"]
+      icon: SiDotnet,
+      title: "Full Stack Web Development",
+      summary:
+        "Developing complete web applications using React, ASP.NET Core, databases, and REST APIs.",
+      key: [
+        "End-to-End Apps",
+        "Query Optimization",
+        "Data Security",
+        "Database Design",
+      ],
     },
     {
-      icon:MdApi,
-      title:"Backend API Development",
-      summary:"Creating secure and scalable REST APIs with ASP.NET Core, Entity Framework Core, and JWT Authentication.",
-      key:["RESTful APIs","Clean Architecture","Error Handling","Secure Endpoints"]
+      icon: MdApi,
+      title: "Backend API Development",
+      summary:
+        "Creating secure and scalable REST APIs with ASP.NET Core, Entity Framework Core, and JWT Authentication.",
+      key: [
+        "RESTful APIs",
+        "Clean Architecture",
+        "Error Handling",
+        "Secure Endpoints",
+      ],
     },
     {
-      icon:FaDatabase,
-      title:"Database Design & Management",
-      summary:"Designing and managing SQL Server and MongoDB databases for efficient data storage and retrieval.",
-      key:["Data Modeling","Query Optimization","Data Security","Database Design"]
+      icon: FaDatabase,
+      title: "Database Design & Management",
+      summary:
+        "Designing and managing SQL Server and MongoDB databases for efficient data storage and retrieval.",
+      key: [
+        "Data Modeling",
+        "Query Optimization",
+        "Data Security",
+        "Database Design",
+      ],
     },
     {
-      icon:MdSecurity,
-      title:"Authentication & Security",
-      summary:"Implementing JWT Authentication, Role-Based Authorization, and secure user access control.",
-      key:["JWT Auth","Role Based Authorization","Protected Routes","Secure Access"]
+      icon: MdSecurity,
+      title: "Authentication & Security",
+      summary:
+        "Implementing JWT Authentication, Role-Based Authorization, and secure user access control.",
+      key: [
+        "JWT Auth",
+        "Role Based Authorization",
+        "Protected Routes",
+        "Secure Access",
+      ],
     },
     {
-      icon:FaPython,
-      title:"Python Automation & Data Analytics",
-      summary:"Building data-driven applications and dashboards using Python, Pandas, NumPy, Matplotlib, and Streamlit.",
-      key:["Data Analysis","Data Visualization","Dashboard Development","Automation"]
-    }
-
-  ]
-
+      icon: FaPython,
+      title: "Python Automation & Data Analytics",
+      summary:
+        "Building data-driven applications and dashboards using Python, Pandas, NumPy, Matplotlib, and Streamlit.",
+      key: [
+        "Data Analysis",
+        "Data Visualization",
+        "Dashboard Development",
+        "Automation",
+      ],
+    },
+  ];
 
   return (
-    <div className="w-full min-h-screen px-5 lg:px-25 grid grid-cols-1 place-content-center gap-10 bg-[#141414]">
-      {/* ====== Heading Section ====== */}
+    <div className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10 bg-[#141414]">
+      {/* ====== Services Heading Section ====== */}
       <div className="grid place-items-center gap-3">
-        <h1 className=" text-3xl md:text-5xl  text-[#00f7ff] font-extrabold ">
+        <h1 className=" text-3xl md:text-5xl  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent font-extrabold ">
           What I Do
         </h1>
-        <div className="h-1 w-25 bg-[#00f7ff] rounded-full"></div>
+        <div className="h-1 w-25 bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] rounded-full"></div>
       </div>
 
       {/* ====== Services Section ======= */}
-      <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 place-items-center gap-10">
-
+      <div className="w-full flex justify-center items-center flex-wrap gap-10 ">
         {service.map((category, index) => {
-          const Icon = category.icon
+          const Icon = category.icon;
           return (
             <div
               key={index}
-              className="flex flex-col items-start justify-center gap-4 h-100 w-full lg:w-90 bg-[#1a2026] rounded-lg border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5">
+              className="flex flex-col items-start justify-center gap-4 h-100 w-full md:w-90 bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5 "
+            >
               <div className="flex flex-col items-center justify-center gap-5">
-
-                <div className='bg-[#00f7ff] size-17 rounded-full grid place-items-center'>
-                  <Icon className="text-[#000000] text-3xl font-bold ">
-                  </Icon>
+                <div
+                  className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] size-18 rounded-full grid place-items-center"
+                >
+                  <Icon className="text-[#000000] text-3xl font-bold "></Icon>
                 </div>
-                <span className='font-bold text-xl'>{category.title}</span>
-                <span className='text-gray-400 text-center'>{category.summary}</span>
+                <span className="font-bold text-xl">{category.title}</span>
+                <span className="text-gray-400 text-center">
+                  {category.summary}
+                </span>
 
-                <div className='flex gap-2 flex-wrap justify-center'>
-
-                  {
-                    category.key.map((items,index)=>{
-                      return(
-            
-                        <span key={index} className='text-[#00f7ff] bg-[#203031] flex text-sm rounded-full px-2 py-1 border border-[#31494b]'>{items}</span>
-                      
-                      )
-                    })
-                  }
-                        
+                <div className="flex gap-2 flex-wrap justify-center">
+                  {category.key.map((items, index) => {
+                    return (
+                      <span
+                        key={index}
+                        className="text-[#00f7ff] bg-[#203031] flex text-sm rounded-full px-2 py-1 border border-[#31494b]"
+                      >
+                        {items}
+                      </span>
+                    );
+                  })}
                 </div>
-
-                
-
               </div>
-
             </div>
           );
         })}
-
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

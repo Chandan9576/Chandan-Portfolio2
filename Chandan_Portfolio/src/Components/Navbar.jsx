@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,7 +16,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-20 border-b border-gray-700 flex items-center justify-between px-5 lg:px-25 fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
+    <div className="h-20 border-b border-gray-700 flex items-center justify-between fixed top-0 left-0 w-full z-50 backdrop-blur-lg">
       {/* Logo */}
       <p className="text-3xl font-bold text-white cursor-pointer" onClick={()=>{navigate("/")}}>Chandan</p>
 
@@ -27,7 +28,7 @@ const Navbar = () => {
             to={to}
             className={({ isActive }) =>
               `px-4 py-1.5 rounded-full transition-all duration-200 ${
-                isActive ? "bg-[#00f7ff] text-black" : "hover:bg-[#274a59]"
+                isActive ? "bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] text-black" : "hover:bg-[#1e4142]"
               }`
             }
           >
@@ -38,11 +39,11 @@ const Navbar = () => {
 
       {/* CTA Button */}
       <button
-        className="bg-[#00f7ff] h-10 lg:h-14 px-5 w-auto rounded-full text-[17px] text-black border cursor-pointer shrink-0 transition-all
-        duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,217,255,0.25)] font-medium"
+        className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] h-10 lg:h-14 px-5 w-auto rounded-full text-[17px] text-black border cursor-pointer shrink-0 transition-all
+        duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,217,255,0.25)] font-semibold flex justify-center items-center gap-2"
         onClick={()=>{navigate("/contact")}}
       >
-        Let's Talk
+       <FaPhoneAlt/> Let's Talk
       </button>
     </div>
   );

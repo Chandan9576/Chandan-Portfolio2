@@ -56,18 +56,18 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 px-5 lg:px-25">
+    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1">
       <div className=" flex flex-col justify-center gap-5">
 
         {/* ====== Available for work section ====== */}
         <div className="flex items-center gap-5">
           <div className="h-1 w-12 bg-[#00f7ff]"></div>
           <p
-            className="text-[#00f7ff]
+            className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent
             uppercase
             tracking-[2px]
-            text-sm
-            font-semibold"
+            text-lg
+            font-semibold font-space"
           >
             AVAILABE FOR WORK
           </p>
@@ -78,7 +78,7 @@ const Home = () => {
           <h1 className="font-space text-3xl md:text-5xl font-bold leading-tight">
             Hi, I'm Chandan!
           </h1>
-          <p className="font-space text-3xl md:text-5xl font-bold text-[#00f7ff]">
+          <p className="font-space text-3xl md:text-5xl font-bold bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">
             <TypeAnimation
               sequence={[
                 "Software Developer",
@@ -104,9 +104,9 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className="font-space h-25 w-full lg:w-45 bg-[#1a2026] rounded-lg  flex flex-col justify-center items-center gap-2 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]"
+                className=" h-30 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center items-center gap-2 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] cursor-context-menu"
               >
-                <p className="text-2xl lg:text-3xl font-bold text-[#00f7ff]">
+                <p className="text-2xl lg:text-3xl font-bold bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">
                   {info.data}
                 </p>
                 <p className="text-sm text-gray-400">{info.title}</p>
@@ -124,7 +124,7 @@ const Home = () => {
                 onClick={() => {
                   window.open(content.link, "_blank", "noopener,noreferrer");
                 }}
-                className="border border-gray-700 rounded-full lg:px-7 px-5 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
+                className="border border-gray-700 rounded-full lg:px-7 px-5 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
               >
                 {content.name} <content.icon />
               </button>
@@ -138,7 +138,7 @@ const Home = () => {
             return (
               <button
                 key={index}
-                className="border-gray-700 text-[20px] border p-3 rounded-xl bg-[#1a2026] text-gray-400 hover:bg-green-500 hover:text-black transition-all duration-300 hover:shadow-xl hover:shadow-cyan-600/50 cursor-pointer"
+                className="border-gray-700 text-[20px] border p-3 rounded-xl bg-[#1a2026] text-gray-400 hover:bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] hover:text-black transition-all duration-300 hover:shadow-xl hover:shadow-cyan-600/50 cursor-pointer"
                 onClick={() => {
                   window.open(
                     socialMedia.link,

@@ -88,20 +88,25 @@ const Skills = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen px-5 lg:px-25 grid grid-cols-1 place-content-center gap-10">
+    <div className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10">
+
+      {/* ====== Skill Heading Section ====== */}
       <div className="grid place-items-center gap-3">
-        <h1 className=" text-3xl md:text-5xl  text-[#00f7ff] font-extrabold ">
+        <h1 className=" text-3xl md:text-5xl  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent font-extrabold ">
           Skills & Expertise
         </h1>
-        <div className="h-1 w-25 bg-[#00f7ff] rounded-full"></div>
+        <div className="h-1 w-25 bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] rounded-full"></div>
       </div>
 
-      <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 place-items-center gap-10">
+      {/* ====== Skills Section ====== */}
+      <div className="w-full flex justify-center items-center flex-wrap gap-10 ">
         {skillData.map((category, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col  items-start gap-4 h-80 w-full lg:w-100 bg-[#1a2026] rounded-lg border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] pt-7 pl-5">
+              className="flex flex-col  items-start gap-4 h-80 w-full  bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] pt-7 px-5 md:w-90">
+
+                
               <div className="flex items-center justify-center w-full">
                 <span className="text-[#00f7ff] text-xl font-bold">
                   {category.title}
@@ -115,7 +120,10 @@ const Skills = () => {
                     <div key={index} className="flex items-center gap-4">
                       <Icon className="text-[#00f7ff] text-xl" />
                       <span>{skill.name}</span>
-                      <div className="h-1.75 w-20 bg-[#00f7ff] rounded-4xl "></div>
+                      <div className="flex-1 h-1.75 w-30 bg-[#293a3b] rounded-full">
+                        <div className="w-3/4 h-full bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e]  rounded-full"></div>
+                      </div>
+                      {/* <div className="h-1.75 w-20 bg-[#00f7ff] rounded-4xl"></div> */}
                     </div>
                   );
               })}

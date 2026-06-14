@@ -5,10 +5,11 @@ import { FaBriefcase } from "react-icons/fa6";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 px-5 lg:px-25 bg-[#141414]">
+    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 bg-[#141414] place-content-center gap-20 lg:gap-0">
 
       {/* ===== Image Section ====== */}
       <div className="grid items-center justify-center lg:justify-start">
+
         <div className="relative flex items-center justify-center lg:justify-end w-full">
 
           {/* CYAN GLOW */}
@@ -32,11 +33,12 @@ const About = () => {
       </div>
 
       {/* ===== About Me ===== */}
-      <div className="flex flex-col items-center justify-center">
+
+      <div className="flex flex-col items-center lg:justify-center">
         {/* ------ heading ------ */}
         <div className="grid place-items-center gap-3">
-          <h1 className=" text-3xl md:text-5xl text-[#00f7ff] font-extrabold ">About Me</h1>
-          <div className="h-2 w-25 bg-[#00f7ff] rounded-full"></div>
+          <h1 className=" text-3xl md:text-5xl font-extrabold  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">About Me</h1>
+          <div className="h-1 w-25 bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] rounded-full"></div>
         </div>
 
         {/* ------ About me information ------ */}
