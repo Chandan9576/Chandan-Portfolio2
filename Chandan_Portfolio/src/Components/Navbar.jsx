@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscThreeBars } from "react-icons/vsc";
 import { FaTimes } from "react-icons/fa";
