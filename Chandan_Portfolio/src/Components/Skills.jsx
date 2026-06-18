@@ -88,7 +88,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10">
+    <section id="skills" className="w-full min-h-screen grid place-items-center gap-10 px-5 lg:px-20 py-10">
 
       {/* ====== Skill Heading Section ====== */}
       <div className="grid place-items-center gap-3">
@@ -99,14 +99,13 @@ const Skills = () => {
       </div>
 
       {/* ====== Skills Section ====== */}
-      <div className="w-full flex justify-center items-center flex-wrap gap-10 ">
+      <div className="w-full flex flex-wrap lg:grid-cols-3 gap-7 lg:w-fit lg:gap-10 justify-center">
         {skillData.map((category, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col  items-start gap-4 h-80 w-full  bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] pt-7 px-5 md:w-90">
+              className="flex flex-col  items-start gap-4 h-80 w-full  bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] pt-7 px-5 lg:w-100">
 
-                
               <div className="flex items-center justify-center w-full">
                 <span className="text-[#00f7ff] text-xl font-bold">
                   {category.title}
@@ -131,7 +130,7 @@ const Skills = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
 

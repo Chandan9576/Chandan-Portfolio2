@@ -7,22 +7,50 @@ import Skills from './Components/Skills'
 import Services from './Components/Services'
 import Projects from './Components/Projects'
 import Contact from './Components/Contact'
+import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div>
-      <Navbar/>
+    <div style={{ position: 'relative', minHeight: '100vh', background: '#050008' }}>
+      
+        {/* Blob 1 — Purple */}
+        <div style={{
+          position: 'fixed', width: '550px', height: '550px',
+          background: '#7c3aed', borderRadius: '50%',
+          filter: 'blur(140px)', opacity: 0.4,
+          top: '-10px', left: '-120px', zIndex: 0,
+          pointerEvents: 'none'
+        }}/>
 
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/skills' element={<Skills/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/projects' element={<Projects/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-      </Routes>
+        {/* Blob 2 — Blue */}
+        <div style={{
+          position: 'fixed', width: '500px', height: '500px',
+          background: '#2563eb', borderRadius: '50%',
+          filter: 'blur(130px)', opacity: 0.35,
+          bottom: '18%', right: '5%', zIndex: 0,
+          pointerEvents: 'none'
+        }}/>
+
+        {/* Blob 3 — Pink */}
+        <div style={{
+          position: 'fixed', width: '400px', height: '400px',
+          background: '#db2777', borderRadius: '50%',
+          filter: 'blur(120px)', opacity: 0.25,
+          top: '60%', left: '30%', zIndex: 0,
+          pointerEvents: 'none'
+        }}/> 
+      
+
+      {/* All Sections */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+
     </div>
   )
 }

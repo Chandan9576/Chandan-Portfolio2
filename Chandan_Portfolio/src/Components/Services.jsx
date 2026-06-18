@@ -17,7 +17,6 @@ const Services = () => {
         "Responsive Design",
         "Perfomance Optimized",
         "Seo Friendly",
-        "Modern Design",
       ],
     },
     {
@@ -83,7 +82,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10 bg-[#141414]">
+    <section id="services" className="w-full min-h-screen grid grid-cols-1 place-items-center gap-10  px-5 lg:px-20 py-10">
       {/* ====== Services Heading Section ====== */}
       <div className="grid place-items-center gap-3">
         <h1 className=" text-3xl md:text-5xl  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent font-extrabold ">
@@ -93,15 +92,14 @@ const Services = () => {
       </div>
 
       {/* ====== Services Section ======= */}
-      <div className="w-full flex justify-center items-center flex-wrap gap-10 ">
+      <div className="w-full flex flex-wrap lg:grid-cols-3 gap-7 lg:w-fit lg:gap-10 justify-center">
         {service.map((category, index) => {
           const Icon = category.icon;
           return (
             <div
               key={index}
-              className="flex flex-col items-start justify-center gap-4 h-100 w-full md:w-90 bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5 "
-            >
-              <div className="flex flex-col items-center justify-center gap-5">
+              className="flex flex-col items-start justify-center gap-4 h-100 w-full lg:w-90 bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5">
+              <div className="flex flex-col items-center justify-center gap-5 ">
                 <div
                   className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] size-18 rounded-full grid place-items-center"
                 >
@@ -129,7 +127,7 @@ const Services = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

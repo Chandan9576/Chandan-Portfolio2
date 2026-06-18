@@ -2,15 +2,24 @@ import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdCastForEducation } from "react-icons/md";
 import { FaBriefcase } from "react-icons/fa6";
+import { FaDownload } from "react-icons/fa6";
+
 
 const About = () => {
+
+  const aboutinfo = [
+    {titile:"Education",info:"Bachelor of Science - Information Technology",icon:MdCastForEducation},
+    {titile:"Experience",info:"Fresher",icon:FaBriefcase},
+    {titile:"Location",info:"Ranchi, Jharkhand",icon:FaLocationDot}
+  ]
+
   return (
-    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 bg-[#141414] place-content-center gap-20 lg:gap-0">
+    <section id="about" className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10  px-5 lg:px-20 py-10">
 
       {/* ===== Image Section ====== */}
-      <div className="grid items-center justify-center lg:justify-start">
+      <div className="grid place-items-center">
 
-        <div className="relative flex items-center justify-center lg:justify-end w-full">
+        <div className="relative flex items-center justify-center w-full">
 
           {/* CYAN GLOW */}
           <div className="absolute w-[320px] h-80 md:w-105 md:h-105 bg-cyan-400/50 blur-3xl rounded-full animate-pulse"></div>
@@ -20,21 +29,18 @@ const About = () => {
             {/* INNER BOX */}
             <div className="w-full h-full bg-[#0B1120] rounded-4xl overflow-hidden">
               <img
-                src="./src/assets/chandan.jpeg"
+                src="./src/assets/chandanPortfolio.jpeg"
                 alt="Chandan"
-                className="w-full h-full object-cover hover:scale-107 transition-all duration-500"
+                className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
               />
             </div>
           </div>
         </div>
-        {/* <button className="border border-gray-700 rounded-full lg:px-7 px-6 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-[#00f7ff] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50">
-          Donwnload CV
-        </button> */}
       </div>
 
       {/* ===== About Me ===== */}
 
-      <div className="flex flex-col items-center lg:justify-center">
+      <div className="flex flex-col gap-10 justify-center items-center ">
         {/* ------ heading ------ */}
         <div className="grid place-items-center gap-3">
           <h1 className=" text-3xl md:text-5xl font-extrabold  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">About Me</h1>
@@ -42,49 +48,39 @@ const About = () => {
         </div>
 
         {/* ------ About me information ------ */}
-        <div className="mt-10 grid gap-5">
+        <div className=" grid gap-5">
           <div>
             <p className="text-gray-400">
               I'm a fresher software developer with a strong foundation in full-stack web development. I have a keen eye for clean UI and efficient back-end logic. I believe in learning by doing — most of what I know comes from building real projects, breaking things, and fixing them. I'm currently looking for my first professional opportunity where I can contribute, grow, and make an impact.
             </p>
           </div>
 
-          <div className="h-20 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
-            <div className="flex items-center justify-start gap-5 ml-5">
-              <div>
-                <MdCastForEducation className="text-2xl text-[#00f7ff]" />
-              </div>
-              <div className="">
-                <p className="font-bold text-lg">Education</p>
-                <p className=" text-gray-400">Computer Sciencce</p>
-              </div>
-            </div>
-          </div>
-          <div className="h-20 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
-            <div className="flex items-center justify-start gap-5 ml-5">
-              <div>
-                <FaLocationDot className="text-2xl text-[#00f7ff]" />
-              </div>
-              <div className="">
-                <p className="font-bold text-lg">Location</p>
-                <p className=" text-gray-400">Ranchi</p>
-              </div>
-            </div>
-          </div>
-          <div className="h-20 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
-            <div className="flex items-center justify-start gap-5 ml-5">
-              <div>
-                <FaBriefcase className="text-2xl text-[#00f7ff]" />
-              </div>
-              <div className="">
-                <p className="font-bold text-lg">Experience</p>
-                <p className=" text-gray-400">Fresher</p>
-              </div>
-            </div>
+
+          {
+            aboutinfo.map((items,index)=>{
+              const Icon = items.icon
+              return(
+                <div key={index} className="h-20 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
+                  <div className="flex items-center justify-start gap-5 ml-5">
+                    <div>
+                      <Icon className="text-2xl text-[#00f7ff]" />
+                    </div>
+                    <div className="">
+                      <p className="font-bold text-lg">{items.titile}</p>
+                      <p className=" text-gray-400">{items.info}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+          
+          <div>
+            <button onClick={()=>{window.open("https://drive.google.com/file/d/15ZXzSQIlj0WyyL0Rfu06U3sGjeu9Pl5D/view?usp=drive_link","_blank", "noopener,noreferrer")}} className="px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white">Download CV <FaDownload /></button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

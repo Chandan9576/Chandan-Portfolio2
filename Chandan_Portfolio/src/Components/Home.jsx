@@ -12,7 +12,7 @@ const Home = () => {
     {
       name: "Hire Me",
       icon: FaArrowRight,
-      link: "",
+      link: "mailto:chandan95765@gmail.com",
     },
     {
       name: "Download CV",
@@ -24,7 +24,7 @@ const Home = () => {
   const socialMedia = [
     {
       icon: FaWhatsapp,
-      link: "https://www.linkedin.com/in/chandan-kumar-prajapati-64b870371/",
+      link: "https://wa.me/919576456165",
     },
     {
       icon: IoLogoGithub,
@@ -36,7 +36,7 @@ const Home = () => {
     },
     {
       icon: FaInstagram,
-      link: "https://www.linkedin.com/in/chandan-kumar-prajapati-64b870371/",
+      link: "https://www.instagram.com/https__chandan?igsh=aG02bnV2cmQ2NXQz",
     },
   ];
 
@@ -56,7 +56,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1">
+    <section id="home" className="w-full min-h-screen grid lg:grid-cols-2 grid-cols-1 px-5 lg:px-20 py-30 gap-15">
       <div className=" flex flex-col justify-center gap-5">
 
         {/* ====== Available for work section ====== */}
@@ -124,7 +124,7 @@ const Home = () => {
                 onClick={() => {
                   window.open(content.link, "_blank", "noopener,noreferrer");
                 }}
-                className="border border-gray-700 rounded-full lg:px-7 px-5 py-3 flex justify-center items-center gap-3 cursor-pointer hover:bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] hover:text-black duration-300 hover:shadow-xl hover:shadow-cyan-600/50"
+                className="px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white"
               >
                 {content.name} <content.icon />
               </button>
@@ -138,7 +138,7 @@ const Home = () => {
             return (
               <button
                 key={index}
-                className="border-gray-700 text-[20px] border p-3 rounded-xl bg-[#1a2026] text-gray-400 hover:bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] hover:text-black transition-all duration-300 hover:shadow-xl hover:shadow-cyan-600/50 cursor-pointer"
+                className="p-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white text-[20px]"
                 onClick={() => {
                   window.open(
                     socialMedia.link,
@@ -163,18 +163,18 @@ const Home = () => {
         </div>
 
         {/* ====== IMAGE CONTAINER ====== */}
-        <div className="relative w-75 h-105 md:w-95 md:h-125 rounded-4xl bg-linear-to-b from-cyan-400/30 to-transparent p-0.75 shadow-[0_0_40px_rgba(0,217,255,0.2)] overflow-hidden animate-[float_5s_ease-in-out_infinite]">
+        <div className="relative w-75 h-105 md:w-95 md:h-125 rounded-4xl bg-linear-to-b from-cyan-400/30 to-transparent p-0.75 shadow-[0_0_40px_rgba(0,217,255,0.2)] overflow-hidden animate-[float_4s_ease-in-out_infinite]">
           {/* INNER BOX */}
           <div className="w-full h-full bg-[#0B1120] rounded-4xl overflow-hidden">
             <img
-              src="./src/assets/chandan.jpeg"
+              src="./src/assets/chandanPortfolio.jpeg"
               alt="Chandan"
-              className="w-full h-full object-cover hover:scale-107 transition-all duration-500"
+              className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
