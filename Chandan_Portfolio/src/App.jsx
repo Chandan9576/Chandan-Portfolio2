@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import About from './Components/About'
-import Skills from './Components/Skills'
-import Services from './Components/Services'
-import Projects from './Components/Projects'
-import Contact from './Components/Contact'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Skills from './Pages/Skills'
+import Services from './Pages/Services'
+import Projects from './Pages/Projects'
+import Contact from './Pages/Contact'
 import './App.css'
 
 const App = () => {

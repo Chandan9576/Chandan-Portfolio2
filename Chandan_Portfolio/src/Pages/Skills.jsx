@@ -7,7 +7,7 @@ import {LuNetwork,} from "react-icons/lu";
 import {PiTreeStructureBold,} from "react-icons/pi";
 import {BsDatabaseFillGear,} from "react-icons/bs";
 import { BsDatabaseFill } from "react-icons/bs";
-import TiltCard from "./TiltCard";
+import TiltCard from "../Components/TiltCard";
 
 const Skills = () => {
 

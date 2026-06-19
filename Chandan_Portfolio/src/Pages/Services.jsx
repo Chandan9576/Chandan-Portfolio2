@@ -5,7 +5,7 @@ import { FaPython } from "react-icons/fa";
 import { MdApi } from "react-icons/md";
 import { MdSecurity } from "react-icons/md";
 import { SiDotnet } from "react-icons/si";
-import ShineCard from "./ShineCard";
+import ShineCard from "../Components/ShineCard";
 
 const Services = () => {
   const service = [
