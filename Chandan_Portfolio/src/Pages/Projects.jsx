@@ -72,7 +72,7 @@ const Projects = () => {
         {projetcsData.map((category, index) => {
           const Image = category.image
           return (
-            <div key={index} className="flex flex-col items-start justify-center gap-4 h-120 w-full lg:w-95 bg-black/30 backdrop-blur-xl rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] overflow-hidden">
+            <div key={index} className="flex flex-col items-start justify-center gap-4 h-auto pb-5 md:h-120 w-full lg:w-95 bg-black/30 backdrop-blur-xl rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] overflow-hidden">
 
               <div className="group relative w-full h-full overflow-hidden">
 

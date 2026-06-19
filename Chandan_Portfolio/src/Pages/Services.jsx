@@ -99,7 +99,7 @@ const Services = () => {
           return (
             <div
               key={index}
-              className="flex flex-col items-start justify-center gap-4 h-100 w-full lg:w-90 bg-black/30 backdrop-blur-xl rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5">
+              className="flex flex-col items-start justify-center gap-4 h-auto md:h-100 w-full lg:w-90 bg-black/30 backdrop-blur-xl rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] px-5 py-5 md:py-0">
               <div className="flex flex-col items-center justify-center gap-5 ">
                 <div
                   className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] size-18 rounded-full grid place-items-center"

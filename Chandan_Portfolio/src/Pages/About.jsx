@@ -14,10 +14,10 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10  px-5 lg:px-20 py-10 ">
+    <section id="about" className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10  px-5 lg:px-20 py-10 place-items-start md:place-items-center">
 
       {/* ===== Image Section ====== */}
-      <div className="grid place-items-center">
+      <div className="md:flex place-items-center hidden">
 
         <div className="relative flex items-center justify-center w-full">
 
@@ -48,7 +48,7 @@ const About = () => {
         </div>
 
         {/* ------ About me information ------ */}
-        <div className=" grid gap-5">
+        <div className="grid gap-5">
           <div>
             <p className="text-gray-400">
               I'm a fresher software developer with a strong foundation in full-stack web development. I have a keen eye for clean UI and efficient back-end logic. I believe in learning by doing — most of what I know comes from building real projects, breaking things, and fixing them. I'm currently looking for my first professional opportunity where I can contribute, grow, and make an impact.
@@ -60,7 +60,7 @@ const About = () => {
             aboutinfo.map((items,index)=>{
               const Icon = items.icon
               return(
-                <div key={index} className="h-20 w-full bg-black/30 backdrop-blur-xl rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
+                <div key={index} className="h-25 w-full bg-black/30 backdrop-blur-xl rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
                   <div className="flex items-center justify-start gap-5 ml-5">
                     <div>
                       <Icon className="text-2xl text-[#00f7ff]" />
@@ -76,7 +76,7 @@ const About = () => {
           }
           
           <div>
-            <button onClick={()=>{window.open("https://drive.google.com/file/d/15ZXzSQIlj0WyyL0Rfu06U3sGjeu9Pl5D/view?usp=drive_link","_blank", "noopener,noreferrer")}} className="px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white">Download CV <FaDownload /></button>
+            <button onClick={()=>{window.open("https://drive.google.com/file/d/15ZXzSQIlj0WyyL0Rfu06U3sGjeu9Pl5D/view?usp=drive_link","_blank", "noopener,noreferrer")}} className="px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white">Download CV <FaDownload /></button>
           </div>
         </div>
       </div>

@@ -41,7 +41,7 @@ const Contact = () => {
       icon: FaPhoneAlt,
       title: "Phone",
       titleInfo: "+91 9576456165",
-      link: "tel:919576456165",
+      link: "tel:9576456165",
       hyperLink: "Call Now",
     },
     {
@@ -137,7 +137,7 @@ const Contact = () => {
 
                 <div className="flex flex-col gap-1">
                   <p className="font-bold text-lg">{items.title}</p>
-                  <p className="text-gray-400">{items.titleInfo}</p>
+                  <p className="text-gray-400 wrap-anywhere">{items.titleInfo}</p>
                   <p
                     className="text-[#00f7ff] cursor-pointer hover:underline"
                     onClick={() => {
@@ -154,7 +154,7 @@ const Contact = () => {
 
         {/* ----- contact form ----- */}
         <div className="grid place-items-center w-full lg:px-20">
-          <div className="bg-black/30 backdrop-blur-xl rounded-2xl w-full border border-gray-700 h-full">
+          <div className="bg-black/30 backdrop-blur-xl rounded-2xl w-full border border-gray-700 h-full pb-5">
             <form
               onSubmit={handleOnSubmit}
               className="grid grid-cols-1 place-content-center gap-10 pt-10 px-7"
@@ -179,7 +179,7 @@ const Contact = () => {
               })}
 
               <div className="relative w-full">
-                <FaMessage className="absolute left-4 top-1/3 -translate-y-1/2 text-gray-400" />
+                <FaMessage className="absolute left-4 top-4.5 text-gray-400" />
                 <textarea
                   name="message"
                   value={formData.message}
