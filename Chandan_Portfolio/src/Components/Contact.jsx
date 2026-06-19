@@ -110,8 +110,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10  px-5 lg:px-20 py-10"
-    >
+      className="w-full min-h-screen grid grid-cols-1 place-content-center gap-10  px-5 lg:px-20 py-10 ">
       {/* ====== Contact Heading Section ====== */}
       <div className="grid place-items-center gap-3">
         <h1 className=" text-3xl md:text-5xl  bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent font-extrabold">
@@ -130,7 +129,7 @@ const Contact = () => {
             return (
               <div
                 key={index}
-                className="bg-[#1a2026] h-35 w-full rounded-2xl flex items-center gap-10 px-5 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]"
+                className="bg-black/30 backdrop-blur-xl h-35 w-full rounded-2xl flex items-center gap-10 px-5 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]"
               >
                 <div className="bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] size-15 rounded-full grid place-items-center">
                   <Icon className="text-[#000000] text-3xl font-bold p-0.75"></Icon>
@@ -155,7 +154,7 @@ const Contact = () => {
 
         {/* ----- contact form ----- */}
         <div className="grid place-items-center w-full lg:px-20">
-          <div className="bg-[#1a2026] rounded-2xl w-full border border-gray-700 h-full">
+          <div className="bg-black/30 backdrop-blur-xl rounded-2xl w-full border border-gray-700 h-full">
             <form
               onSubmit={handleOnSubmit}
               className="grid grid-cols-1 place-content-center gap-10 pt-10 px-7"
@@ -173,7 +172,7 @@ const Contact = () => {
                       value={formData[items.name]}
                       onChange={handleOnChange}
                       placeholder={items.placeholder}
-                      className="border border-[#00f7ff] outline-none w-full p-3 pl-10 rounded-lg focus:bg-[#000000]"
+                      className="border border-[#00f7ff] outline-none w-full p-3 pl-10 rounded-lg focus:bg-cyan-400/10"
                     />
                   </div>
                 );

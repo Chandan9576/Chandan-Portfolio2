@@ -14,7 +14,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10  px-5 lg:px-20 py-10">
+    <section id="about" className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 gap-10  px-5 lg:px-20 py-10 ">
 
       {/* ===== Image Section ====== */}
       <div className="grid place-items-center">
@@ -60,7 +60,7 @@ const About = () => {
             aboutinfo.map((items,index)=>{
               const Icon = items.icon
               return(
-                <div key={index} className="h-20 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
+                <div key={index} className="h-20 w-full bg-black/30 backdrop-blur-xl rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
                   <div className="flex items-center justify-start gap-5 ml-5">
                     <div>
                       <Icon className="text-2xl text-[#00f7ff]" />

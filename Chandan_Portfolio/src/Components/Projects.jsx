@@ -72,7 +72,7 @@ const Projects = () => {
         {projetcsData.map((category, index) => {
           const Image = category.image
           return (
-            <div key={index} className="flex flex-col items-start justify-center gap-4 h-120 w-full lg:w-95 bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] overflow-hidden hover:-translate-y-1">
+            <div key={index} className="flex flex-col items-start justify-center gap-4 h-120 w-full lg:w-95 bg-black/30 backdrop-blur-xl rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] overflow-hidden">
 
               <div className="group relative w-full h-full overflow-hidden">
 
@@ -103,7 +103,7 @@ const Projects = () => {
                   {category.technology.map((items, index) => {
                     return (
                       <span key={index}
-                        className="text-[#00f7ff] bg-[#203031] flex text-sm rounded-full px-2 py-1 border border-[#31494b]">
+                        className="bg-cyan-400/10 border border-[#02c3c9] text-[#02c3c9] text-sm px-4 py-1.5 rounded-full cursor-default">
                           {items}
                       </span>
                     );

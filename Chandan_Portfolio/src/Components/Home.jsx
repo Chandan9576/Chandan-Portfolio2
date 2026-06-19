@@ -104,8 +104,8 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className=" h-30 w-full bg-[#1a2026] rounded-lg  flex flex-col justify-center items-center gap-2 border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] cursor-context-menu"
-              >
+                className="h-30 w-full flex flex-col justify-center items-center gap-2 bg-black/30 backdrop-blur-xl border border-gray-700 rounded-2xl p-6  cursor-context-menu">
+                  
                 <p className="text-2xl lg:text-3xl font-bold bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">
                   {info.data}
                 </p>

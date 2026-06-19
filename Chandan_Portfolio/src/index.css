@@ -1,15 +1,11 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-inter: "Inter", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
-}
-
-
-:root {
   color: white;
-  font-family: "Inter", sans-serif;
-  
+  font-family: var(--font-inter);
+  /* background: linear-gradient(to right, #000000, #0B1120, #152331); */
 }
 html {
   scroll-behavior: smooth;
@@ -18,7 +14,7 @@ section {
   scroll-margin-top: 80px;
 }
 
-/* @keyframes float {
+@keyframes float {
   0%{
     transform: translateY(0px);
   }
@@ -30,42 +26,4 @@ section {
   100%{
     transform: translateY(0px);
   }
-}  */
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background: #050008;
-}
-
-
-
-/* Blob effect
-body::before {
-  content: '';
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  background: #7c3aed;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.4;
-  top: -100px;
-  left: -100px;
-  z-index: 0;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  width: 350px;
-  height: 350px;
-  background: #2563eb;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.35;
-  bottom: -80px;
-  right: -80px;
-  z-index: 0;
-} */
+} 

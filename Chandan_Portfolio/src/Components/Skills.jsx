@@ -7,6 +7,7 @@ import {LuNetwork,} from "react-icons/lu";
 import {PiTreeStructureBold,} from "react-icons/pi";
 import {BsDatabaseFillGear,} from "react-icons/bs";
 import { BsDatabaseFill } from "react-icons/bs";
+import TiltCard from "./TiltCard";
 
 const Skills = () => {
 
@@ -102,9 +103,9 @@ const Skills = () => {
       <div className="w-full flex flex-wrap lg:grid-cols-3 gap-7 lg:w-fit lg:gap-10 justify-center">
         {skillData.map((category, index) => {
           return (
-            <div
+            <TiltCard
               key={index}
-              className="flex flex-col  items-start gap-4 h-80 w-full  bg-[#1a2026] rounded-xl border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] pt-7 px-5 lg:w-100">
+              className="flex flex-col  items-start gap-4 h-80 w-full pt-7 px-5 lg:w-100 bg-black/30 backdrop-blur-xl border border-gray-700 rounded-2xl p-6 cursor-pointer">
 
               <div className="flex items-center justify-center w-full">
                 <span className="text-[#00f7ff] text-xl font-bold">
@@ -126,7 +127,7 @@ const Skills = () => {
                     </div>
                   );
               })}
-            </div>
+            </TiltCard>
           );
         })}
       </div>
