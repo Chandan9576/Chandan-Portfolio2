@@ -46,7 +46,7 @@ const Navbar = () => {
             <FaPhoneAlt /> Let's Talk
           </button>
 
-          <button className="text-3xl text-[#00f7ff] lg:hidden border border-gray-700 p-2 rounded-lg"
+          <button className="text-2xl text-[#00f7ff] lg:hidden border border-gray-700 p-1.5 rounded-lg"
             onClick={() => setSidebaeIsOpen(true)}>
             <VscThreeBars />
           </button>
@@ -66,17 +66,17 @@ const Navbar = () => {
         <div className={`lg:hidden fixed top-0 right-0 h-screen w-55 md:w-1/2 bg-black/80 transform transition-transform duration-200 ${sidbarIsOpen ? "translate-x-0" : "translate-x-full"} z-50`}>
           <button
             onClick={() => setSidebaeIsOpen(false)}
-            className="absolute top-6 right-7 text-3xl text-[#00f7ff] border border-gray-700 p-2 rounded-lg">
+            className="absolute top-6 right-7 text-2xl text-[#00f7ff] border border-gray-700 p-1.5 rounded-lg">
             <FaTimes />
           </button>
 
           <div className="flex flex-col gap-5 pt-20 px-5">
               {links.map(({ to, label }) => (
-                <a
-                  key={to}
+                <a className="bg-cyan-400/20 rounded-lg p-2 pl-5" key={to}
                   href={to}
                   onClick={()=>setSidebaeIsOpen(false)}>
                     {label}
+                  
                 </a>
               ))}
             </div>
