@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdCastForEducation } from "react-icons/md";
 import { FaBriefcase } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa6";
-
+import profileImg from "../assets/chandanPortfolio.jpeg";
 
 const About = () => {
 
@@ -29,7 +29,7 @@ const About = () => {
             {/* INNER BOX */}
             <div className="w-full h-full bg-[#0B1120] rounded-4xl overflow-hidden">
               <img
-                src="./src/assets/chandanPortfolio.jpeg"
+                src={profileImg}
                 alt="Chandan"
                 className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
               />

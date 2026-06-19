@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
+import profileImg from "../assets/chandanPortfolio.jpeg";
 
 const Home = () => {
   const HireAndDownloadCVButton = [
@@ -167,7 +168,7 @@ const Home = () => {
           {/* INNER BOX */}
           <div className="w-full h-full bg-[#0B1120] rounded-4xl overflow-hidden">
             <img
-              src="./src/assets/chandanPortfolio.jpeg"
+              src={profileImg}
               alt="Chandan"
               className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
             />
