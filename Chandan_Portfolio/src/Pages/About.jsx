@@ -60,7 +60,7 @@ const About = () => {
             aboutinfo.map((items,index)=>{
               const Icon = items.icon
               return(
-                <div key={index} className="h-25 w-full bg-black/30 backdrop-blur-xl rounded-lg  flex flex-col justify-center border border-gray-700 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
+                <div key={index} className="h-25 w-full bg-black/30 backdrop-blur-xl rounded-lg  flex flex-col justify-center border border-white/25 hover:border-[#00f7ff]  transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
                   <div className="flex items-center justify-start gap-5 ml-5">
                     <div>
                       <Icon className="text-2xl text-[#00f7ff]" />
@@ -76,7 +76,7 @@ const About = () => {
           }
           
           <div>
-            <button onClick={()=>{window.open("https://drive.google.com/file/d/15ZXzSQIlj0WyyL0Rfu06U3sGjeu9Pl5D/view?usp=drive_link","_blank", "noopener,noreferrer")}} className="px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white">Download CV <FaDownload /></button>
+            <button onClick={()=>{window.open("https://drive.google.com/file/d/15ZXzSQIlj0WyyL0Rfu06U3sGjeu9Pl5D/view?usp=drive_link","_blank", "noopener,noreferrer")}} className="px-5 py-3 border border-white/25 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white bg-black/30">Download CV <FaDownload /></button>
           </div>
         </div>
       </div>

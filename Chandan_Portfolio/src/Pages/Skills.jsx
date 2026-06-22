@@ -105,7 +105,7 @@ const Skills = () => {
           return (
             <TiltCard
               key={index}
-              className="flex flex-col  items-start gap-4 h-80 w-full pt-7 px-5 lg:w-100 bg-black/30 backdrop-blur-xl border border-gray-700 rounded-2xl p-6 cursor-pointer">
+              className="flex flex-col  items-start gap-4 h-80 w-full pt-7 px-5 lg:w-100 bg-black/30 backdrop-blur-xl border border-white/25 rounded-2xl p-6 cursor-pointer">
 
               <div className="flex items-center justify-center w-full">
                 <span className="text-[#00f7ff] text-xl font-bold">

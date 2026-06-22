@@ -28,7 +28,7 @@ const TiltCard = ({ children, className }) => {
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)'
     card.style.transition = 'transform 500ms ease, background 500ms ease, box-shadow 500ms ease'
     card.style.background = 'rgba(0,0,0,0.45)'
-    card.style.borderColor = 'rgba(255,255,255,0.2)'
+    card.style.borderColor = 'rgba(255,255,255,0.3)'
     card.style.boxShadow = 'none'
   }
 

@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-20  flex items-center justify-between fixed top-0 left-0 w-full z-50 px-5 lg:px-20 backdrop-blur-md border-b border-gray-700">
+      <div className="h-20  flex items-center justify-between fixed top-0 left-0 w-full z-50 px-5 lg:px-20 backdrop-blur-md border-b border-white/25">
 
         {/* ====== Logo ======= */}
         <p
@@ -29,7 +29,7 @@ const Navbar = () => {
         </p>
 
         {/* ====== Nav Links ====== */}
-        <div className="bg-black/30 h-14 w-full hidden lg:flex items-center justify-center gap-10 mx-10 rounded-full text-[17px] border border-gray-700">
+        <div className="bg-black/30 h-14 w-full hidden lg:flex items-center justify-center gap-10 mx-10 rounded-full text-[17px] border border-white/25">
           {links.map(({ to, label }) => (
             <a key={to} href={to} >
               {label}
@@ -46,7 +46,7 @@ const Navbar = () => {
             <FaPhoneAlt /> Let's Talk
           </button>
 
-          <button className="text-2xl text-[#00f7ff] lg:hidden border border-gray-700 p-1.5 rounded-lg"
+          <button className="text-2xl text-[#00f7ff] lg:hidden border border-white/25 p-1.5 rounded-lg bg-cyan-400/10"
             onClick={() => setSidebaeIsOpen(true)}>
             <VscThreeBars />
           </button>
@@ -66,13 +66,13 @@ const Navbar = () => {
         <div className={`lg:hidden fixed top-0 right-0 h-screen w-55 md:w-1/2 bg-black/80 transform transition-transform duration-200 ${sidbarIsOpen ? "translate-x-0" : "translate-x-full"} z-50`}>
           <button
             onClick={() => setSidebaeIsOpen(false)}
-            className="absolute top-6 right-7 text-2xl text-[#00f7ff] border border-gray-700 p-1.5 rounded-lg">
+            className="absolute top-5 right-5 text-2xl text-[#00f7ff] border border-white/25 p-1.5 rounded-lg bg-cyan-400/10">
             <FaTimes />
           </button>
 
           <div className="flex flex-col gap-5 pt-20 px-5">
               {links.map(({ to, label }) => (
-                <a className="bg-cyan-400/20 rounded-lg p-2 pl-5" key={to}
+                <a className="bg-cyan-400/10 rounded-lg p-2 pl-5" key={to}
                   href={to}
                   onClick={()=>setSidebaeIsOpen(false)}>
                     {label}

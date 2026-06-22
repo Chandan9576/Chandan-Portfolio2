@@ -105,7 +105,7 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className="h-30 w-full flex flex-col justify-center items-center gap-2 bg-black/30 backdrop-blur-xl border border-gray-700 rounded-2xl p-6  cursor-context-menu hover:border-[#00f7ff] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
+                className="h-30 w-full flex flex-col justify-center items-center gap-2 bg-black/30 backdrop-blur-xl border border-white/25 rounded-2xl p-6  cursor-context-menu hover:border-[#00f7ff] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)]">
                   
                 <p className="text-2xl lg:text-3xl font-bold bg-linear-to-r from-[#00f7ff] via-[#00c1c7] to-[#00999e] bg-clip-text text-transparent">
                   {info.data}
@@ -117,7 +117,7 @@ const Home = () => {
         </div>
 
         {/* ====== Button section ====== */}
-        <div className="flex gap-5 justify-center md:justify-start md:mt-2">
+        <div className="flex gap-5 justify-start md:mt-2">
           {HireAndDownloadCVButton.map((content, index) => {
             return (
               <button
@@ -125,7 +125,7 @@ const Home = () => {
                 onClick={() => {
                   window.open(content.link, "_blank", "noopener,noreferrer");
                 }}
-                className="px-2 md:px-5 py-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white"
+                className="px-5 py-3 border border-white/25 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white bg-black/30"
               >
                 {content.name} <content.icon />
               </button>
@@ -139,7 +139,7 @@ const Home = () => {
             return (
               <button
                 key={index}
-                className="p-3 border border-gray-700 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white text-[20px]"
+                className="p-3 border border-white/25 flex items-center justify-center gap-3 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-110 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-linear-to-r before:from-[#00f7ff] before:to-[#00999e] hover:text-black before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-white text-[20px] bg-black/30"
                 onClick={() => {
                   window.open(
                     socialMedia.link,
